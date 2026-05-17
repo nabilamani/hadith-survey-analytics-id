@@ -243,40 +243,42 @@ export default function Dashboard() {
       `}} />
       
       {/* GLOBAL STICKY HEADER / LANGUAGE BAR */}
-      <nav className="w-full bg-pure-white border-b border-gray-border/60 py-3.5 sticky top-0 z-50 shadow-xs">
+      <nav className="w-full bg-pure-white border-b border-gray-border/60 py-3 sticky top-0 z-50 shadow-xs">
         <div className="max-w-[1200px] mx-auto px-4 md:px-6 flex justify-between items-center">
           <div className="flex items-center gap-2">
             <BookOpenCheck className="w-5 h-5 text-primary-dark" />
-            <span className="font-semibold text-xs text-charcoal-dark tracking-wide uppercase">
+            <span className="font-semibold text-xs text-charcoal-dark tracking-wide uppercase hidden sm:inline">
               {t.footerTitle}
             </span>
           </div>
           
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 sm:gap-3">
             {/* Premium Download PDF Button */}
             <button
               onClick={() => window.print()}
-              className="flex items-center gap-1.5 bg-pure-white border border-gray-border hover:border-primary-dark/40 hover:bg-primary/5 text-charcoal-dark px-3 py-1.5 rounded-badge text-xs font-semibold shadow-raised cursor-pointer transition-all active:scale-95 duration-200"
+              className="flex items-center gap-1.5 bg-pure-white border border-gray-border hover:border-primary-dark/40 hover:bg-primary/5 text-charcoal-dark p-2 sm:px-3 sm:py-1.5 rounded-badge text-xs font-semibold shadow-raised cursor-pointer transition-all active:scale-95 duration-200"
             >
               <Download className="w-3.5 h-3.5 text-primary-dark" />
-              <span>{t.downloadPdf}</span>
+              <span className="hidden sm:inline">{t.downloadPdf}</span>
             </button>
 
             {/* Global Language Selector */}
             <div className="flex items-center gap-1 bg-gray-border/30 p-0.5 rounded-badge border border-gray-border/40">
               {(["id", "ar", "en"] as const).map((lang) => {
-                const labels = { id: "Indonesia", ar: "العربية", en: "English" };
+                const labelsFull = { id: "Indonesia", ar: "العربية", en: "English" };
+                const labelsShort = { id: "ID", ar: "AR", en: "EN" };
                 return (
                   <button
                     key={lang}
                     onClick={() => setGlobalLanguage(lang)}
-                    className={`px-3 py-1 text-xs font-semibold rounded-badge transition-all cursor-pointer ${
+                    className={`px-2 sm:px-3 py-1 text-xs font-semibold rounded-badge transition-all cursor-pointer ${
                       globalLanguage === lang 
                         ? "bg-primary-dark text-pure-white shadow-xs" 
                         : "text-gray-medium hover:text-charcoal-dark"
                     }`}
                   >
-                    {labels[lang]}
+                    <span className="hidden sm:inline">{labelsFull[lang]}</span>
+                    <span className="inline sm:hidden">{labelsShort[lang]}</span>
                   </button>
                 );
               })}
