@@ -226,6 +226,13 @@ export default function Dashboard() {
           .h-48 {
             height: 160px !important;
           }
+          .hadith-print-grid {
+            max-height: none !important;
+            overflow: visible !important;
+          }
+          .hadith-print-grid > *:nth-child(n+6) {
+            display: none !important;
+          }
         }
       `}} />
       
@@ -716,7 +723,7 @@ export default function Dashboard() {
           </div>
 
           {/* HADITH SCROLLABLE LIST GRID */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-h-[550px] overflow-y-auto pr-1">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-h-[550px] overflow-y-auto pr-1 hadith-print-grid">
             {sortedHadiths.map((hadith) => {
               const activeLang = cardLanguages[hadith.colIndex] || globalLanguage;
               return (
