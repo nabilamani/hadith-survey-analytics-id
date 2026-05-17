@@ -37,7 +37,7 @@ import { uiTranslations } from "@/data/uiTranslations";
 
 export default function Dashboard() {
   const [isMounted, setIsMounted] = useState(false);
-  const [globalLanguage, setGlobalLanguage] = useState<"id" | "ar" | "en">("id");
+  const [globalLanguage, setGlobalLanguage] = useState<"id" | "ar" | "en">("ar");
   const [selectedGroup, setSelectedGroup] = useState<number>(0); // 0 = Semua, 1-5 = Group 1-5
   const [searchQuery, setSearchQuery] = useState("");
   const [sortBy, setSortBy] = useState<"percentage-desc" | "percentage-asc" | "col-index">("percentage-desc");
