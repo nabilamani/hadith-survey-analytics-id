@@ -1,5 +1,6 @@
 export const uiTranslations = {
   id: {
+    downloadPdf: "Unduh Laporan PDF",
     langLabel: "Bahasa",
     reportTag: "Laporan Penelitian Ilmiah",
     titleMain: "Survei Hadis-Hadis Populer di",
@@ -82,6 +83,7 @@ export const uiTranslations = {
     footerBuiltWith: "Built using"
   },
   ar: {
+    downloadPdf: "تحميل تقرير PDF",
     langLabel: "اللغة",
     reportTag: "تقرير البحث العلمي",
     titleMain: "استطلاع الأحاديث النبوية الشائعة في",
@@ -164,6 +166,7 @@ export const uiTranslations = {
     footerBuiltWith: "تم التطوير باستخدام"
   },
   en: {
+    downloadPdf: "Download PDF Report",
     langLabel: "Language",
     reportTag: "Scientific Research Report",
     titleMain: "Survey of Popular Hadiths in",

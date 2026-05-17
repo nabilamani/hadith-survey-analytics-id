@@ -16,7 +16,8 @@ import {
   Calendar,
   Layers,
   ArrowUpDown,
-  BookOpenCheck
+  BookOpenCheck,
+  Download
 } from "lucide-react";
 import { 
   ResponsiveContainer, 
@@ -166,6 +167,67 @@ export default function Dashboard() {
 
   return (
     <div className="min-h-screen bg-off-white pb-16 flex flex-col font-sans" dir={isRTL ? "rtl" : "ltr"}>
+      <style dangerouslySetInnerHTML={{ __html: `
+        @media print {
+          nav, 
+          button, 
+          .no-print,
+          input,
+          select,
+          .sticky,
+          .language-bar {
+            display: none !important;
+          }
+          body, 
+          html, 
+          main {
+            background: #FFFFFF !important;
+            color: #1A1A1A !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            width: 100% !important;
+            max-width: 100% !important;
+          }
+          * {
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+            color-adjust: exact !important;
+          }
+          @page {
+            size: A4 landscape;
+            margin: 10mm;
+          }
+          .bg-pure-white,
+          .rounded-card,
+          section,
+          div[role="region"],
+          .border {
+            page-break-inside: avoid !important;
+            break-inside: avoid !important;
+          }
+          .grid-cols-5 {
+            grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+          }
+          .lg\\:grid-cols-12 {
+            grid-template-columns: repeat(12, minmax(0, 1fr)) !important;
+          }
+          .lg\\:col-span-8 {
+            grid-column: span 8 / span 8 !important;
+          }
+          .lg\\:col-span-4 {
+            grid-column: span 4 / span 4 !important;
+          }
+          .grid-cols-2 {
+            grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+          }
+          .h-64 {
+            height: 220px !important;
+          }
+          .h-48 {
+            height: 160px !important;
+          }
+        }
+      `}} />
       
       {/* GLOBAL STICKY HEADER / LANGUAGE BAR */}
       <nav className="w-full bg-pure-white border-b border-gray-border/60 py-3.5 sticky top-0 z-50 shadow-xs">
@@ -177,24 +239,35 @@ export default function Dashboard() {
             </span>
           </div>
           
-          {/* Global Language Selector */}
-          <div className="flex items-center gap-1 bg-gray-border/30 p-0.5 rounded-badge border border-gray-border/40">
-            {(["id", "ar", "en"] as const).map((lang) => {
-              const labels = { id: "Indonesia", ar: "العربية", en: "English" };
-              return (
-                <button
-                  key={lang}
-                  onClick={() => setGlobalLanguage(lang)}
-                  className={`px-3 py-1 text-xs font-semibold rounded-badge transition-all cursor-pointer ${
-                    globalLanguage === lang 
-                      ? "bg-primary-dark text-pure-white shadow-xs" 
-                      : "text-gray-medium hover:text-charcoal-dark"
-                  }`}
-                >
-                  {labels[lang]}
-                </button>
-              );
-            })}
+          <div className="flex items-center gap-3">
+            {/* Premium Download PDF Button */}
+            <button
+              onClick={() => window.print()}
+              className="flex items-center gap-1.5 bg-pure-white border border-gray-border hover:border-primary-dark/40 hover:bg-primary/5 text-charcoal-dark px-3 py-1.5 rounded-badge text-xs font-semibold shadow-raised cursor-pointer transition-all active:scale-95 duration-200"
+            >
+              <Download className="w-3.5 h-3.5 text-primary-dark" />
+              <span>{t.downloadPdf}</span>
+            </button>
+
+            {/* Global Language Selector */}
+            <div className="flex items-center gap-1 bg-gray-border/30 p-0.5 rounded-badge border border-gray-border/40">
+              {(["id", "ar", "en"] as const).map((lang) => {
+                const labels = { id: "Indonesia", ar: "العربية", en: "English" };
+                return (
+                  <button
+                    key={lang}
+                    onClick={() => setGlobalLanguage(lang)}
+                    className={`px-3 py-1 text-xs font-semibold rounded-badge transition-all cursor-pointer ${
+                      globalLanguage === lang 
+                        ? "bg-primary-dark text-pure-white shadow-xs" 
+                        : "text-gray-medium hover:text-charcoal-dark"
+                    }`}
+                  >
+                    {labels[lang]}
+                  </button>
+                );
+              })}
+            </div>
           </div>
         </div>
       </nav>
@@ -579,7 +652,7 @@ export default function Dashboard() {
             </div>
             
             {/* SEARCH AND SORT BAR */}
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 no-print">
               
               {/* Search */}
               <div className="relative flex-1 sm:w-64">
@@ -611,7 +684,7 @@ export default function Dashboard() {
           </div>
 
           {/* GROUP FILTER TABS */}
-          <div className="flex flex-wrap gap-1.5 border-b border-gray-border/50 pb-3">
+          <div className="flex flex-wrap gap-1.5 border-b border-gray-border/50 pb-3 no-print">
             {hadithGroups.map((grp) => (
               <button
                 key={grp.num}
