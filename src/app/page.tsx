@@ -214,6 +214,12 @@ export default function Dashboard() {
           .lg\\:col-span-8 {
             grid-column: span 8 / span 8 !important;
           }
+          .lg\\:col-span-7 {
+            grid-column: span 7 / span 7 !important;
+          }
+          .lg\\:col-span-5 {
+            grid-column: span 5 / span 5 !important;
+          }
           .lg\\:col-span-4 {
             grid-column: span 4 / span 4 !important;
           }
@@ -743,7 +749,7 @@ export default function Dashboard() {
                       </div>
                       
                       {/* Translate Pill Selector */}
-                      <div className="flex items-center gap-0.5 bg-gray-border/30 p-0.5 rounded-badge border border-gray-border/40" dir="ltr">
+                      <div className="flex items-center gap-0.5 bg-gray-border/30 p-0.5 rounded-badge border border-gray-border/40 no-print" dir="ltr">
                         {(["id", "ar", "en"] as const).map((lang) => (
                           <button
                             key={lang}
@@ -829,7 +835,7 @@ export default function Dashboard() {
                       </div>
 
                       {/* Translate Pill Selector */}
-                      <div className="flex items-center gap-0.5 bg-gray-border/30 p-0.5 rounded-badge border border-gray-border/40" dir="ltr">
+                      <div className="flex items-center gap-0.5 bg-gray-border/30 p-0.5 rounded-badge border border-gray-border/40 no-print" dir="ltr">
                         {(["id", "ar", "en"] as const).map((lang) => (
                           <button
                             key={lang}
