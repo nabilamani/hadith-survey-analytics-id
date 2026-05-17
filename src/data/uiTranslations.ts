@@ -1,0 +1,248 @@
+export const uiTranslations = {
+  id: {
+    langLabel: "Bahasa",
+    reportTag: "Laporan Penelitian Ilmiah",
+    titleMain: "Survei Hadis-Hadis Populer di",
+    titleSub: "Masyarakat Indonesia",
+    description: "Sebuah visualisasi analisis statistik interaktif yang memetakan tingkat pengenalan dan pemahaman masyarakat Indonesia terhadap 123 hadis dan tradisi keagamaan. Menganalisis demografi responden, sumber penyebaran informasi keagamaan, serta memisahkan pemahaman hadis dari adat budaya.",
+    respondentsInvolved: "Responden Terlibat",
+    hadithsTested: "Butir Hadis Diuji",
+    mainCategories: "Kategori Utama",
+    
+    // KPIs
+    kpiTotalRespondents: "Total Responden",
+    kpiDataValid: "100% Data Valid",
+    kpiDominantAge: "Usia Dominan",
+    kpiOfRespondents: "responden",
+    kpiDominantGender: "Gender Terbanyak",
+    kpiDominantRegion: "Wilayah Terbanyak",
+    kpiPulau: "Pulau",
+    kpiPrimarySource: "Sumber Informasi",
+    kpiOfflineCategory: "Kajian & Offline",
+    
+    // Demographics
+    chartAgeTitle: "Komposisi Kelompok Usia",
+    chartAgeSubtitle: "Distribusi umur seluruh responden survei",
+    chartIslandTitle: "Persebaran Wilayah (Pulau)",
+    chartIslandSubtitle: "Mapping pemukiman asal responden",
+    chartGenderTitle: "Komposisi Gender Responden",
+    chartGenderSubtitle: "Perbandingan jumlah partisipan laki-laki dan perempuan",
+    genderWhyTitle: "Mengapa Mayoritas Perempuan?",
+    genderWhyDesc: "Sebesar 78.87% (209 responden) adalah perempuan. Data ini menunjukkan keikutsertaan aktif perempuan dalam pengisian jajak pendapat keagamaan berbasis digital serta tingginya atensi gender perempuan terhadap kajian hadis populer di ruang kemasyarakatan.",
+    chartLoad: "Memuat grafik...",
+    
+    // Sources
+    sourceTitle: "Media Informasi Keagamaan",
+    sourceSubtitle: "Dari mana responden memperoleh ilmu agama",
+    sourceRatioTitle: "Rasio Saluran Informasi",
+    sourceDigital: "Media Digital (Instagram, TikTok, YouTube)",
+    sourceOffline: "Majelis/Offline (Pengajian, Kampus, Keluarga)",
+    sourceDisclaimer: "*Responden diperbolehkan memilih lebih dari 1 opsi media saluran informasi.",
+    sourceRankTitle: "Peringkat Saluran Terpopuler",
+    sourceKlik: "klik",
+    sourceOrang: "orang",
+    
+    // Hadith Browser
+    browserTitle: "Browser Popularitas Hadis",
+    browserSubtitle: "Cari, sortir, dan saring 123 butir hadis berdasarkan kelompok akademis",
+    browserSearchPlaceholder: "Cari kata kunci hadis...",
+    browserSortHigh: "Popularitas Tertinggi",
+    browserSortLow: "Popularitas Terendah",
+    browserSortOrder: "Urutan Kuesioner",
+    browserShowing: "Menampilkan",
+    browserOf: "dari",
+    browserHadiths: "hadis",
+    browserResetSearch: "Reset pencarian",
+    browserRank: "Rank",
+    browserPopularityRate: "Tingkat Popularitas:",
+    browserHeard: "Mendengar",
+    browserNeverHeard: "Belum Pernah",
+    browserPeople: "orang",
+    
+    // Warnings & Findings
+    warningTitle: "Kritis: Hadis Dengan Popularitas < 50%",
+    warningSubtitle: "Mengidentifikasi 7 item yang kurang dikenal atau bersumber dari adat kemasyarakatan",
+    warningPublicRate: "Tingkat pengenalan masyarakat:",
+    warningPeringkat: "Peringkat",
+    warningOf: "dari 123",
+    
+    analysisTitle: "Analisis & Temuan Penting",
+    analysisPoint1Title: "1. Distingsi Hadis dan Budaya Lokal",
+    analysisPoint1Desc: "Sebagian besar dari 7 item di bawah 50% bukanlah hadis Nabi yang sah, melainkan tradisi budaya kemasyarakatan lokal (seperti mandi kembang tujuh rupa dan hantaran makanan legit) yang sering dilekatkan dengan ajaran keagamaan. Fakta bahwa pengenalannya rendah menunjukkan responden memiliki filter pemisahan yang baik antara syariat agama dan tradisi adat murni.",
+    analysisPoint2Title: "2. Pemahaman Rukun Islam & Iman Sempurna",
+    analysisPoint2Desc: "Masyarakat menunjukkan tingkat pengenalan mutlak sebesar 100.00% (Rank 1 & 2) pada masalah dasar akidah seperti teks Rukun Islam dan kewajiban Menuntut Ilmu. Hal ini menegaskan bahwa fondasi pengajaran keagamaan dasar di Indonesia sangat kuat dan merata.",
+    analysisPoint3Title: "3. Dampak Dominasi Saluran Digital",
+    analysisPoint3Desc: "Instagram dan YouTube menempati porsi digital tertinggi bagi responden usia muda (19-25 tahun). Pengajaran agama di masa modern mengalami pergeseran dari sekadar tatap muka fisik menuju mikro-konten digital. Para akademisi perlu menyusun strategi digitalisasi hadis shahih yang terstruktur untuk mengimbangi konten keagamaan yang tidak berdasar.",
+    analysisAdviceLabel: "Saran Peneliti:",
+    analysisAdviceDesc: "Program literasi hadis kritis perlu difokuskan pada pemisahan tradisi adat mistis/budaya dari syariat, serta pengemasan sanad hadis dalam format infografis di media sosial.",
+    
+    // Footer
+    footerTitle: "Penelitian Statistika Hadis Populer",
+    footerCopyright: "“Survei Hadis-Hadis Populer di Masyarakat Indonesia”",
+    footerBuiltWith: "Built using"
+  },
+  ar: {
+    langLabel: "اللغة",
+    reportTag: "تقرير البحث العلمي",
+    titleMain: "استطلاع الأحاديث النبوية الشائعة في",
+    titleSub: "المجتمع الإندونيسي",
+    description: "تصوير تفاعلي للتحليل الإحصائي يوضح مدى معرفة وفهم المجتمع الإندونيسي لـ 123 حديثاً ونقاشات حول التقاليد الدينية والموروث الشعبي. يحلل التركيبة السكانية للمشاركين، ومصادر انتشار المعرفة الدينية، ويفصل الشريعة عن العادات المحلية.",
+    respondentsInvolved: "مشارك مساهم",
+    hadithsTested: "حديث خضع للاختبار",
+    mainCategories: "فئات رئيسية",
+    
+    // KPIs
+    kpiTotalRespondents: "إجمالي المشاركين",
+    kpiDataValid: "١٠٠٪ بيانات صالحة",
+    kpiDominantAge: "الفئة العمرية السائدة",
+    kpiOfRespondents: "من المشاركين",
+    kpiDominantGender: "الجنس الأكثر مشاركة",
+    kpiDominantRegion: "المنطقة الأكثر تواجداً",
+    kpiPulau: "جزيرة",
+    kpiPrimarySource: "مصدر المعلومات",
+    kpiOfflineCategory: "ندوات ومحاضرات",
+    
+    // Demographics
+    chartAgeTitle: "تركيبة الفئات العمرية",
+    chartAgeSubtitle: "التوزيع السني لكافة المشاركين في الاستبيان",
+    chartIslandTitle: "التوزيع الجغرافي (الجزر)",
+    chartIslandSubtitle: "خرائط للمناطق السكنية الأصلية للمشاركين",
+    chartGenderTitle: "تركيبة جنس المشاركين",
+    chartGenderSubtitle: "مقارنة بين عدد المشاركين من الذكور والإناث",
+    genderWhyTitle: "لماذا الغالبية العظمى من الإناث؟",
+    genderWhyDesc: "حوالي 78.87% (209 مشارك) من الإناث. تشير هذه البيانات إلى المشاركة الفعالة للإناث في استطلاعات الرأي الدينية الرقمية واهتمامهن البالغ بمطالعة ودراسة الأحاديث النبوية الشائعة.",
+    chartLoad: "جاري تحميل الرسم البياني...",
+    
+    // Sources
+    sourceTitle: "وسائل المعرفة الدينية",
+    sourceSubtitle: "من أين يستسقي المشاركون المعرفة الشرعية",
+    sourceRatioTitle: "نسبة قنوات المعلومات",
+    sourceDigital: "وسائل الإعلام الرقمي (إنستغرام، تيك توك، يوتيوب)",
+    sourceOffline: "مجالس العلم / اللقاءات (المسجد، الجامعة، العائلة)",
+    sourceDisclaimer: "*يُسمح للمشاركين باختيار أكثر من قناة معلومات واحدة.",
+    sourceRankTitle: "ترتيب القنوات الأكثر شعبية",
+    sourceKlik: "نقرة",
+    sourceOrang: "شخص",
+    
+    // Hadith Browser
+    browserTitle: "مستعرض شعبية الأحاديث",
+    browserSubtitle: "البحث والفرز والتصفية لـ 123 حديثاً وفقاً للمجموعات الأكاديمية",
+    browserSearchPlaceholder: "البحث عن كلمات مفتاحية في الأحاديث...",
+    browserSortHigh: "الأعلى شعبية",
+    browserSortLow: "الأقل شعبية",
+    browserSortOrder: "ترتيب الاستبيان",
+    browserShowing: "عرض",
+    browserOf: "من أصل",
+    browserHadiths: "حديث",
+    browserResetSearch: "إعادة تعيين البحث",
+    browserRank: "الترتيب",
+    browserPopularityRate: "مستوى الشعبية:",
+    browserHeard: "سمع به",
+    browserNeverHeard: "لم يسمع به",
+    browserPeople: "شخص",
+    
+    // Warnings & Findings
+    warningTitle: "الأحاديث ذات الشعبية الأقل من 50%",
+    warningSubtitle: "تحديد 7 أحاديث غير شائعة أو ناتجة عن التقاليد والعادات الاجتماعية",
+    warningPublicRate: "مستوى معرفة المجتمع:",
+    warningPeringkat: "الترتيب",
+    warningOf: "من أصل 123",
+    
+    analysisTitle: "التحليلات والنتائج الهامة",
+    analysisPoint1Title: "١. التمييز بين الأحاديث والتقاليد المحلية",
+    analysisPoint1Desc: "معظم العناصر السبعة التي تقل شعبيتها عن 50% ليست أحاديث نبوية صحيحة، بل هي تقاليد اجتماعية وموروث شعبي (مثل الاستحمام بسبع زهور) التي تُنسب خطأً للدين. يثبت انخفاض الوعي بها قدرة المشاركين على التمييز الجيد بين الشريعة والموروث.",
+    analysisPoint2Title: "٢. فهم أركان الإسلام والإيمان الكامل",
+    analysisPoint2Desc: "أظهر المشاركون وعياً مطلقاً بنسبة 100.00% بالمسائل الأساسية للعقيدة كأركان الإسلام وطلب العلم، مما يؤكد قوة التعليم الأساسي للدين في إندونيسيا.",
+    analysisPoint3Title: "٣. تأثير هيمنة القنوات الرقمية",
+    analysisPoint3Desc: "يحتل يوتيوب وإنستغرام النسبة الأعلى للشباب (19-25 سنة). انتقل التعليم الديني تدريجياً نحو المحتوى الرقمي السريع، مما يستدعي صياغة استراتيجيات رقمية لنشر الأحاديث الصحيحة.",
+    analysisAdviceLabel: "توصية الباحث:",
+    analysisAdviceDesc: "يجب التركيز على برامج الوعي بالأحاديث النبوية لفصل التقاليد الشعبية والممارسات المبتدعة عن الشريعة المطهرة، وتقديم الأحاديث الصحيحة في قوالب إعلامية جذابة.",
+    
+    // Footer
+    footerTitle: "أبحاث إحصاءات الأحاديث الشائعة",
+    footerCopyright: "“استطلاع الأحاديث النبوية الشائعة في المجتمع الإندونيسي”",
+    footerBuiltWith: "تم التطوير باستخدام"
+  },
+  en: {
+    langLabel: "Language",
+    reportTag: "Scientific Research Report",
+    titleMain: "Survey of Popular Hadiths in",
+    titleSub: "Indonesian Society",
+    description: "An interactive statistical analysis visualization mapping the level of recognition and understanding of the Indonesian public towards 123 hadiths and religious traditions. It analyzes respondent demographics, channels of religious information dissemination, and separates hadith literacy from local cultural traditions.",
+    respondentsInvolved: "Respondents Involved",
+    hadithsTested: "Hadiths Tested",
+    mainCategories: "Main Categories",
+    
+    // KPIs
+    kpiTotalRespondents: "Total Respondents",
+    kpiDataValid: "100% Valid Data",
+    kpiDominantAge: "Dominant Age Group",
+    kpiOfRespondents: "of respondents",
+    kpiDominantGender: "Dominant Gender",
+    kpiDominantRegion: "Dominant Region",
+    kpiPulau: "Island",
+    kpiPrimarySource: "Primary Info Source",
+    kpiOfflineCategory: "Lectures & Offline",
+    
+    // Demographics
+    chartAgeTitle: "Age Group Composition",
+    chartAgeSubtitle: "Age distribution of all survey respondents",
+    chartIslandTitle: "Geographic Distribution (Islands)",
+    chartIslandSubtitle: "Mapping the residency origins of respondents",
+    chartGenderTitle: "Respondent Gender Composition",
+    chartGenderSubtitle: "Comparison of male and female participants",
+    genderWhyTitle: "Why the Female Majority?",
+    genderWhyDesc: "Around 78.87% (209 respondents) are female. This data indicates active female participation in digital religious polls and their high attention towards popular hadith studies in social circles.",
+    chartLoad: "Loading chart...",
+    
+    // Sources
+    sourceTitle: "Religious Information Media",
+    sourceSubtitle: "Where respondents obtain religious knowledge",
+    sourceRatioTitle: "Information Channel Ratio",
+    sourceDigital: "Digital Media (Instagram, TikTok, YouTube)",
+    sourceOffline: "Offline Majelis (Study Groups, Campus, Family)",
+    sourceDisclaimer: "*Respondents are allowed to select more than one source.",
+    sourceRankTitle: "Rank of Most Popular Channels",
+    sourceKlik: "clicks",
+    sourceOrang: "people",
+    
+    // Hadith Browser
+    browserTitle: "Hadith Popularity Browser",
+    browserSubtitle: "Search, sort, and filter 123 hadiths based on academic groups",
+    browserSearchPlaceholder: "Search hadith keywords...",
+    browserSortHigh: "Highest Popularity",
+    browserSortLow: "Lowest Popularity",
+    browserSortOrder: "Questionnaire Order",
+    browserShowing: "Showing",
+    browserOf: "of",
+    browserHadiths: "hadiths",
+    browserResetSearch: "Reset search",
+    browserRank: "Rank",
+    browserPopularityRate: "Popularity Level:",
+    browserHeard: "Heard",
+    browserNeverHeard: "Never Heard",
+    browserPeople: "people",
+    
+    // Warnings & Findings
+    warningTitle: "Critical: Hadiths with Popularity < 50%",
+    warningSubtitle: "Identifying 7 items that are less recognized or sourced from cultural customs",
+    warningPublicRate: "Public recognition rate:",
+    warningPeringkat: "Rank",
+    warningOf: "of 123",
+    
+    analysisTitle: "Analysis & Key Findings",
+    analysisPoint1Title: "1. Distinction of Hadith and Local Culture",
+    analysisPoint1Desc: "Most of the 7 items under 50% are not authentic hadiths of the Prophet, but rather local cultural traditions (such as bathing with seven flowers and legit food gifts) that are frequently conflated with religious teachings. The fact that their recognition is low shows that respondents have a healthy filter separating Sharia from pure cultural traditions.",
+    analysisPoint2Title: "2. Flawless Pillars of Islam & Faith Literacy",
+    analysisPoint2Desc: "The public demonstrated absolute recognition rates of 100.00% (Rank 1 & 2) on fundamental creed issues like the Pillars of Islam and the obligation of Seeking Knowledge. This confirms that foundational basic religious education in Indonesia is highly robust and evenly distributed.",
+    analysisPoint3Title: "3. Impact of Digital Dissemination Channels",
+    analysisPoint3Desc: "Instagram and YouTube occupy the highest digital share for young respondents (19-25 years). Religious learning in the modern era has shifted from purely physical encounters to digital micro-content. Academics need to formulate structured digitalization strategies for sahih hadiths to counter baseless online narrations.",
+    analysisAdviceLabel: "Researcher's Advice:",
+    analysisAdviceDesc: "Programs for critical hadith literacy should focus on separating superstitious/cultural practices from Sharia, and packaging authentic chains of narration into infographics on social media.",
+    
+    // Footer
+    footerTitle: "Popular Hadith Statistics Research",
+    footerCopyright: "“Survey of Popular Hadiths in Indonesian Society”",
+    footerBuiltWith: "Built using"
+  }
+};
